@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 150 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 150 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 10% 15%;
+
+    --primary: 120 40% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 45 90% 55%;
+    --secondary-foreground: 150 10% 15%;
+
+    --muted: 120 15% 95%;
+    --muted-foreground: 150 5% 45%;
+
+    --accent: 120 30% 92%;
+    --accent-foreground: 120 40% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 120 10% 88%;
+    --input: 120 10% 88%;
+    --ring: 120 40% 35%;
+
+    --radius: 0.75rem;
+
+    --hero-gradient: linear-gradient(135deg, hsl(120 40% 35%), hsl(120 50% 28%));
+    --card-shadow: 0 4px 24px -4px hsl(120 20% 20% / 0.12);
+    --card-hover-shadow: 0 12px 40px -8px hsl(120 20% 20% / 0.2);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--hero-gradient);
+  }
+  .bg-hero-gradient {
+    background: var(--hero-gradient);
+  }
+  .shadow-card {
+    box-shadow: var(--card-shadow);
+  }
+  .shadow-card-hover {
+    box-shadow: var(--card-hover-shadow);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
