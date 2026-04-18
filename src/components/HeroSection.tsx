@@ -1,5 +1,4 @@
-import frenchFries from "@/assets/french-fries.jpg";
-
+import heroBanner from "@/assets/hero-banner.jpg";
 const HeroSection = () => {
   return (
     <section id="home" className="relative pt-20 md:pt-24 overflow-hidden">
@@ -34,7 +33,7 @@ const HeroSection = () => {
           </div>
           <div className="flex justify-center animate-fade-in">
             <img
-              src={frenchFries}
+              src={heroBanner}
               alt="True Friends French Fries"
               className="w-72 md:w-96 drop-shadow-2xl hover:scale-105 transition-transform duration-500"
             />
